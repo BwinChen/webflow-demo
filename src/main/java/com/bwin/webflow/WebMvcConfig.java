@@ -1,16 +1,16 @@
 //package com.bwin.webflow;
 //
-//import lombok.AllArgsConstructor;
+//import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
+//import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 //import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 //import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+//import org.springframework.web.servlet.view.InternalResourceViewResolver;
+//import org.springframework.web.servlet.view.JstlView;
 //
-//@AllArgsConstructor
 ////@EnableWebMvc
 //@Configuration
 //public class WebMvcConfig implements WebMvcConfigurer {
-//
-//    private final WebFlowConfig webFlowConfig;
 //
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -24,22 +24,6 @@
 //        viewResolver.setPrefix("/WEB-INF/view/");
 //        viewResolver.setSuffix(".jsp");
 //        return viewResolver;
-//    }
-//
-//    @Bean
-//    public FlowHandlerMapping flowHandlerMapping() {
-//        FlowHandlerMapping handlerMapping = new FlowHandlerMapping();
-//        handlerMapping.setOrder(-1);
-//        handlerMapping.setFlowRegistry(this.webFlowConfig.flowRegistry());
-//        return handlerMapping;
-//    }
-//
-//    @Bean
-//    public FlowHandlerAdapter flowHandlerAdapter() {
-//        FlowHandlerAdapter handlerAdapter = new FlowHandlerAdapter();
-//        handlerAdapter.setFlowExecutor(this.webFlowConfig.flowExecutor());
-//        handlerAdapter.setSaveOutputToFlashScopeOnRedirect(true);
-//        return handlerAdapter;
 //    }
 //
 //    @Override
