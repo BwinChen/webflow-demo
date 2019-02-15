@@ -13,6 +13,9 @@ import org.springframework.webflow.mvc.servlet.FlowHandlerAdapter;
 import org.springframework.webflow.mvc.servlet.FlowHandlerMapping;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
+/**
+ * @see <a href="https://www.baeldung.com/spring-web-flow">Guide to Spring Web Flow</a>
+ */
 @AllArgsConstructor
 @Configuration
 public class WebFlowConfig extends AbstractFlowConfiguration {
@@ -34,7 +37,7 @@ public class WebFlowConfig extends AbstractFlowConfiguration {
 
     @Bean
     public FlowDefinitionRegistry flowRegistry() {
-        return getFlowDefinitionRegistryBuilder(flowBuilderServices()).addFlowLocationPattern("classpath:templates/flows/**/*-flow.xml").build();
+        return getFlowDefinitionRegistryBuilder(flowBuilderServices()).addFlowLocationPattern("classpath:flows/**/*-flow.xml").build();
     }
 
     @Bean
